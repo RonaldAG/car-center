@@ -1,0 +1,12 @@
+0:0:0:0:0:0:0:1 - - [31/Mar/2023:20:50:06 -0300] "GET / HTTP/1.1" 200 274 http-bio-8080-exec-1 251
+0:0:0:0:0:0:0:1 - - [31/Mar/2023:20:50:09 -0300] "POST /create-car HTTP/1.1" 200 203 http-bio-8080-exec-3 91
+0:0:0:0:0:0:0:1 - - [31/Mar/2023:21:09:17 -0300] "POST /homepage HTTP/1.1" 200 274 http-bio-8080-exec-1 26
+0:0:0:0:0:0:0:1 - - [31/Mar/2023:21:09:19 -0300] "POST /create-car HTTP/1.1" 200 203 http-bio-8080-exec-3 3
+0:0:0:0:0:0:0:1 - - [31/Mar/2023:21:09:56 -0300] "POST /homepage HTTP/1.1" 200 274 http-bio-8080-exec-4 3
+0:0:0:0:0:0:0:1 - - [31/Mar/2023:21:09:58 -0300] "POST /create-car HTTP/1.1" 200 203 http-bio-8080-exec-5 2
+0:0:0:0:0:0:0:1 - - [31/Mar/2023:21:09:58 -0300] "POST /homepage HTTP/1.1" 200 274 http-bio-8080-exec-6 1
+0:0:0:0:0:0:0:1 - - [31/Mar/2023:21:09:59 -0300] "POST /create-car HTTP/1.1" 200 203 http-bio-8080-exec-7 0
+0:0:0:0:0:0:0:1 - - [31/Mar/2023:21:10:15 -0300] "POST /homepage HTTP/1.1" 200 274 http-bio-8080-exec-1 29
+0:0:0:0:0:0:0:1 - - [31/Mar/2023:21:10:17 -0300] "POST /create-car HTTP/1.1" 200 205 http-bio-8080-exec-3 355
+0:0:0:0:0:0:0:1 - - [31/Mar/2023:21:10:18 -0300] "POST /homepage HTTP/1.1" 200 274 http-bio-8080-exec-4 2
+0:0:0:0:0:0:0:1 - - [31/Mar/2023:21:10:19 -0300] "POST /create-car HTTP/1.1" 200 205 http-bio-8080-exec-5 1
