@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Enumeration;
+import java.util.List;
 
 @WebServlet("/create-car")
 public class CreateCarServlet extends HttpServlet {
@@ -18,17 +19,13 @@ public class CreateCarServlet extends HttpServlet {
 
         String carName = servletRequest.getParameter("car");
 
-        Car car = new Car();
-        car.setName(carName);
+        Car car = new Car(carName);
 
         System.out.println("Car name: " + car.getName());
 
         CarDao carDao = new CarDao();
         carDao.createCar(car);
 
-        //Seta o atributo para ser enviado na próxima página
-        servletRequest.setAttribute("carName", carName);
-
-        servletRequest.getRequestDispatcher("secondPage.jsp").forward(servletRequest, servletResponse);
+        servletResponse.sendRedirect("/find-all-cars");
     }
 }
