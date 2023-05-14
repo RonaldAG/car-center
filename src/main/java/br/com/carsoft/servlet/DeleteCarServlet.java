@@ -1,16 +1,21 @@
 package br.com.carsoft.servlet;
 
+import br.com.carsoft.dao.CarDao;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-@WebServlet("/homepage")
-public class HomePageServlet extends HttpServlet {
 
+@WebServlet("/delete-car")
+public class DeleteCarServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("index.jsp").forward(req, resp);
+        String id = req.getParameter("id");
+        new CarDao().deleteById(id);
+
+        resp.sendRedirect("/find-all-cars");
     }
 }

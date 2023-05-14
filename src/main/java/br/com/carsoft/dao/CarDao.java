@@ -36,12 +36,26 @@ public class CarDao {
             List<Car> cars = new ArrayList<>();
 
             ResultSet resultSet = statement.getResultSet();
+
             while(resultSet.next()){
-                Car car = new Car(resultSet.getString(1));
+                Car car = new Car(resultSet.getString(2), resultSet.getString(1));
                 cars.add(car);
             }
 
             return cars;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void deleteById(String carId){
+        String SQL = "DELETE CAR WHERE ID = ?";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(SQL)){
+            preparedStatement.setString(1, carId);
+
+            preparedStatement.execute();
+
+            System.out.println("Success on delete car with id: " + carId);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
